@@ -1,0 +1,25 @@
+package com.techstartingpoint.springboot.samples.jwtdemo.security;
+
+
+public class SamplePrivatePublicKeys {
+
+	/**
+	 * A pair of PRIVATE_KEY and PUBLIC_KEY can be used 
+	 * this approach can be used when signature is encrypted with PRIVATE_KEY and decrypted with PUBLIC_KEY . e.g. using algorithm SignatureAlgorithm.RS256
+	 * 
+	 * TODO: Change this keys for the corresponding for your company
+	 * Generally you only would have the PUBLIC_KEY that is provided by the JWT token issuer
+	 */
+	public static final String PRIVATE_KEY= "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3St8ZRUnFKWcsgAUt5sqGAEDaArh0caudjw6NzEA1kOz/H4i1xxL3Z/XLZqp68Ka4+0QAzJEHHGbfHZlGFcBnMhu48R8cGYPinFPjr4bxIQGhIYf7Vo2Ef9Y92snUqgqaNc77513kTWfVRbZbHVamdt5asdio5epTibW1raR0sDfHAw/ZPzM362giO5FsGq8XSJ7WoR/apiMjxFIZLlkq5UJURoxEHcUfhm3IazvrF+7Tv3a2CBPuvXlK92GX177SYQqZaLDeo3Hxyz0d3MQOP47WxIgluB/sGV2+VMELBZ7IxJxGqsdjo/3yrQmKoc3KxffwnyBpi++yrTgMQNwZAgMBAAECggEAWPADgQeV3A1S+szDtpod+xd0YFShnB7r3u/jZ/qLzXIdDU4Hz+xgz5uqMKAIaM8MlwWU4a5hUMn/QJPkI5W6Xlh6Cys0pTXcQMEKE5jAKZCScdULXnGJCZneIvVeqco4istBPAnwDS9iCqJg8aUyvmM/UVKqhonJQe+4NAelnNhx7ftv/uwJd2jTD0LkZVoeRPH3eR4rUQIjz+flal6le0oxLt/Mo2UNmTDzdBaM0E1PeQSQx4Q6Fe+YVrp/i5uwsbDHrLfopcRaSAet7kdBL6Xc6kINPLeFoV1DVq/J219mQhNEepHxXoA2BcvgB8C1rTCpwoRv2SXypdcUwz/jgQKBgQDpMii5+EaceKE6xtUjctxaZt9joJoctsk5/B8brHK3Pz6Ko1NdIOiG2Q0NJHXVrFypF26zPkTEJJ6NUocG2MFar3JqZhhJ10qmq1Iz2Mt1iKxqSF9nCjCxkacJoawjw1diKu5kZ1gBb/ZOgMDZc3HmfDXwj4pHBP3XQz/H6Ta05QKBgQDJN20PiEGeQSvS3u0x0ddScUtxF1ONGM5horBPt3i4MC2a1I5+ph/rBFgsPZtbf8LPLxzXNN9xU2nV9VMhL5KWxyWM1d6PXQa+rneSRTgU03HwUyctnI2owl50aQPN0GWkW2zuiQljFybKQKOwKHDoCD+ZOa5+msy6gYK7+/lrJQKBgQDEBtEre2RIFjNaSFhU4zIOoFl60z+ZkaHYJ3My/SS1m+mD+0WRjJ9K89w/xv1y7+A4mCULcfW2eB38KHqvK7hl9gQVItuZ/uuW7X89bCmkFI7zDQF9iZhjPFARDaG5snSbZgFdz22wT6DaXus+IAiIOrPRE6imiLClqrdL4mSFbQKBgQC95kRUY1jiXUlZwzCCUzNuyCPWAJjG0gF83cieA164Hif8NtygpHH9IGWCo0Xq7cHSPPlwFaNHVdzNo7En4bjr+djzeKiKDtadwRRyBEewR/oBQMj54AVFnuL75FxFsocqvWoqGUS1sxTVznlteE1OfvJezrRjIf9TiYTzmxPCzQKBgHRLIf2z7QkbiXI79EGEWsaDUUFu9Icn2ffEmcA2rl1xXfMpxY6KaZ/K6CWok/yLl3QRQqFioFKQw/PvDq5D2YgPe0mMUkrpMmhj42KPeRUZ+zzxvvRpenDBprye2+K/U1JMHoaz8h233Ms5EXTezmzx3Pwy5wP8N/nHWTsHI3Gp"; 
+	public static final String PUBLIC_KEY= "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt0rfGUVJxSlnLIAFLebKhgBA2gK4dHGrnY8OjcxANZDs/x+ItccS92f1y2aqevCmuPtEAMyRBxxm3x2ZRhXAZzIbuPEfHBmD4pxT46+G8SEBoSGH+1aNhH/WPdrJ1KoKmjXO++dd5E1n1UW2Wx1WpnbeWrHYqOXqU4m1ta2kdLA3xwMP2T8zN+toIjuRbBqvF0ie1qEf2qYjI8RSGS5ZKuVCVEaMRB3FH4ZtyGs76xfu0792tggT7r15Svdhl9e+0mEKmWiw3qNx8cs9HdzEDj+O1sSIJbgf7BldvlTBCwWeyMScRqrHY6P98q0JiqHNysX38J8gaYvvsq04DEDcGQIDAQAB"; 
+
+	/**
+	 * A unique secret key can be used when a unique key schema is chosen 
+	 * this approach can be used when signature is encrypted and decrypted with SignatureAlgorithm.HS512
+	 * 
+	 * TODO: Change this key for your own
+	 * This key is for schemas where your company generates the JWT Token and validates it
+	 */
+	public static final String UNIQUE_SECRET_KEY = "mySecretKey";  	
+	
+}
